@@ -2,6 +2,8 @@
 Treehouse Techdegree:
 FSJS Project 2 - Data Pagination and Filtering
 */
+// student data field
+let currentSearchData = data;
 
 // == display ==
 // function to display search bar
@@ -79,7 +81,8 @@ buttonUL.addEventListener('click', (e) => {
     // clear .active from prev button and assign clicked button className to active
     buttonUL.querySelector('.active').className = '';
     buttonUL.getElementsByTagName('BUTTON')[pageClicked-1].className = 'active';
-    showPage(data, pageClicked);
+    showPage(currentSearchData, pageClicked);
+
   }
 });
 
@@ -104,13 +107,13 @@ searchBar.addEventListener('keyup', e => {
 
 // function to display user student name search
 const displayUserSearch = userSearch => {
-  let filteredList;
   // if usersearch isnt empty, filter data array otherwise display original data
   if(userSearch) {
-    filteredList = filterNames(userSearch);
-    verifySearchFound(filteredList);
-    updatePage(filteredList, 1);
+    currentSearchData = filterNames(userSearch);
+    verifySearchFound(currentSearchData);
+    updatePage(currentSearchData, 1);
   } else {
+    currentSearchData = data;
     updatePage(data, 1);
   }
 };
