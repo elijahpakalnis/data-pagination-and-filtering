@@ -114,6 +114,7 @@ const displayUserSearch = userSearch => {
     updatePage(currentSearchData, 1);
   } else {
     currentSearchData = data;
+    verifySearchFound(currentSearchData)
     updatePage(data, 1);
   }
 };
