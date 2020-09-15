@@ -8,7 +8,8 @@
 
 body {
 	font-family: 'Montserrat', Helvetica, sans-serif;
-	background-color: rgb(229, 238, 250);
+  background-color:black;
+  color: rgb(0, 140, 255);
   transition: 0.4s;
 }
 
@@ -38,7 +39,6 @@ header h2 {
   font-size: 36px;
   text-transform: uppercase;
   font-weight: 800;
-  color: #4a5568;
   letter-spacing: 2px;
 	margin-bottom: 25px;
 }
@@ -58,27 +58,36 @@ header h2 {
 .student-search input {
   width: 100%;
   border-radius: 4px 0 0 4px;
-  border: 1px solid rgb(30, 144, 255);
+  background-color: black;
+  color: rgb(0, 140, 255);
+  border: 2px solid rgb(30, 144, 255);
   padding: 10px 16px;
   font-size: 14px;
+  outline: none;
 }
 
 .student-search input::placeholder {
-  color: #929b9e;
+  color: rgb(0, 140, 255);
 }
 
 .student-search button {
   cursor: pointer;
   width: 55px;
   border-radius: 0 4px 4px 0;
-  border: 1px solid #1e90ff;
+  border: 2px solid #1e90ff;
   border-left: none;
   padding: 0px 5px;
   font-size: 14px;
-  background-color: #1e90ff;
-  color: #fff;
-}
+  background-color: black;
+  outline: none;
 
+}
+.student-search button:hover {
+  border: 3px solid #1e90ff;
+}
+.student-search button:active {
+  border: 5px solid #1e90ff;
+}
 .student-search button img {
   width: 25px;
 }
@@ -97,7 +106,6 @@ header h2 {
   flex-direction: column;
   justify-content: space-between;
   padding: 2.5em;
-  background-color: #fff;
   border-radius: 2px;
   -webkit-transition: box-shadow .3s ease;
   transition: box-shadow .3s ease;
@@ -106,7 +114,6 @@ header h2 {
 .avatar {
   margin: 0 auto;
   border-radius: 50%;
-  background-color: white;
   background-blend-mode: multiply, luminosity;
   width: 90px;
 	height: 90px;
@@ -119,19 +126,17 @@ header h2 {
 	width: 90px;
 	height: 90px;
 	background: rgba(30, 144, 255, 0.25);
-	border-radius: 50%;
+  border-radius: 50%;
 }
 
 .student-item h3 {
 	font-weight: 600;
 	font-size: 1.2rem;
   margin-bottom: 0.45em;
-  color: #1e90ff;
 }
 
 .student-item .email {
 	font-weight: 600;
-  color: #6d778a;
   font-size: 14px;
   letter-spacing: .5px;
 }
@@ -139,11 +144,10 @@ header h2 {
 .date {
 	display: block;
   font-size: 14px;
-  color: #6a7679;
 	font-weight: 400;
 	width: 100%;
   padding-top: 1.1em;
-  border-top: solid 1px #dcdcdc;
+  border-top: solid 1px rgb(0, 140, 255);
   margin-top: 1.1em;
 }
 
@@ -164,18 +168,17 @@ header h2 {
   cursor: pointer;
 	outline: none;
 	padding: 0.5em 0.85em;
-	background: #fff;
-  border: none;
+  border: solid 1px rgb(0, 140, 255);
   border-radius: 3px;
   text-decoration: none;
-	color: #1e90ff;
 	box-shadow: 0 1px 8px 0 rgba(22, 42, 90, 0.05);
-	transition: 0.4s;
+  transition: 0.4s;
+  background-color: black;
+  color:rgb(0, 140, 255);
 }
 
 .pagination li button.active, .pagination li button:hover {
-  background-color: #1e90ff;
-  color: #fff;
+  border: solid 5px rgb(0, 140, 255);
 }
 
 
@@ -184,7 +187,6 @@ header h2 {
 	font-family: 'Nunito', sans-serif;
 	display: block;
 	font-size: 1.5rem;
-	color: #6d778a;
 	width: 500px;
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -210,7 +212,8 @@ header h2 {
 	}
 
 	.student-item {
-		border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 140, 255);
 		box-shadow: 0 4px 16px 0 rgba(22, 42, 90, 0.09);
 	}
 }

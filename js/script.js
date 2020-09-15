@@ -136,7 +136,7 @@ const verifySearchFound = list => {
 
   // list empty && 'no result found' element doesn't exist => create html 
   if(list.length === 0 && studentNotFoundElement === null) {
-    const p = `<p class="student-not-found">No results found :(</p>`
+    const p = `<p class="student-not-found">No results found</p>`
     pageDiv.insertAdjacentHTML('beforeend', p);
   } 
   // list not empty && 'no result found' element exist => remove html
